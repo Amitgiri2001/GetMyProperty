@@ -18,51 +18,51 @@ const RoomCard = ({ room }) => {
 };
 
 const styles = StyleSheet.create({
-    card: {
-      borderWidth: 1,
-      borderColor: '#ccc',
-      borderRadius: 10,
-      overflow: 'hidden',
-      marginBottom: 20,
-      backgroundColor: '#fff',
-      elevation: 4,
-    },
-    image: {
-      width: '100%',
-      height: 200,
-      borderTopLeftRadius: 10,
-      borderTopRightRadius: 10,
-    },
-    details: {
-      padding: 15,
-    },
-    title: {
-      fontSize: 20,
-      fontWeight: 'bold',
-      marginBottom: 5,
-      color: '#333',
-    },
-    description: {
-      fontSize: 16,
-      color: '#666',
-    },
-    footer: {
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      backgroundColor: '#f2f2f2',
-      padding: 15,
-      borderBottomLeftRadius: 10,
-      borderBottomRightRadius: 10,
-    },
-    price: {
-      fontSize: 18,
-      fontWeight: 'bold',
-      color: '#333',
-    },
-    location: {
-      fontSize: 16,
-      color: '#666',
-    },
-  });
+  card: {
+    borderWidth: 1,
+    borderColor: '#ccc',
+    borderRadius: 10,
+    overflow: 'hidden',
+    marginBottom: 20,
+    backgroundColor: '#fff',
+    elevation: 4,
+  },
+  image: {
+    width: '100%',
+    height: 200,
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10,
+  },
+  details: {
+    padding: 15,
+  },
+  title: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginBottom: 5,
+    color: '#333',
+  },
+  description: {
+    fontSize: 16,
+    color: '#666',
+  },
+  footer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    backgroundColor: '#f2f2f2',
+    padding: 15,
+    borderBottomLeftRadius: 10,
+    borderBottomRightRadius: 10,
+  },
+  price: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#333',
+  },
+  location: {
+    fontSize: 16,
+    color: '#666',
+  },
+});
 export default RoomCard;

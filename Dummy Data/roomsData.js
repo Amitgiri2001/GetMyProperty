@@ -6,7 +6,7 @@ const roomsData = [
       "A cozy studio apartment with a modern kitchen and a balcony overlooking the city.",
     price: "$1000/month",
     location: "Downtown",
-    image: require('./roomimg_1.png'), // Example image import
+    image: require("./roomimg_1.png"),
     amenities: ["Wi-Fi", "Air Conditioning", "Laundry", "Parking"],
     availability: "Available",
   },
@@ -17,7 +17,7 @@ const roomsData = [
       "A luxurious penthouse suite with panoramic views, private jacuzzi, and 24/7 concierge service.",
     price: "$3000/month",
     location: "Upper East Side",
-    image: require('./roomimg_2.png'), // Example image import
+    image: require("./roomimg_2.png"), // Example image import
     amenities: ["Wi-Fi", "Air Conditioning", "Gym", "Pool", "Security"],
     availability: "Not Available", // Example of room not being available
   },
@@ -28,7 +28,7 @@ const roomsData = [
       "A charming one-bedroom apartment with hardwood floors and a fireplace.",
     price: "$1500/month",
     location: "Brooklyn",
-    image: require('./roomimg_3.png'),
+    image: require("./roomimg_3.png"),
     amenities: ["Wi-Fi", "Heating", "Laundry"],
     availability: "Available",
   },
@@ -39,7 +39,7 @@ const roomsData = [
       "A trendy loft with floor-to-ceiling windows and stunning views of the city skyline.",
     price: "$2000/month",
     location: "Midtown",
-    image: require('./roomimg_4.png'),
+    image: require("./roomimg_4.png"),
     amenities: ["Wi-Fi", "Air Conditioning", "Parking", "Gym"],
     availability: "Available",
   },
@@ -116,7 +116,7 @@ const roomsData = [
       "A cozy studio apartment with a modern kitchen and a balcony overlooking the city.",
     price: "$1000/month",
     location: "Downtown",
-    image: require('./roomimg_1.png'), // Example image import
+    image: require("./roomimg_1.png"),
     amenities: ["Wi-Fi", "Air Conditioning", "Laundry", "Parking"],
     availability: "Available",
   },
@@ -127,7 +127,7 @@ const roomsData = [
       "A luxurious penthouse suite with panoramic views, private jacuzzi, and 24/7 concierge service.",
     price: "$3000/month",
     location: "Upper East Side",
-    image: require('./roomimg_2.png') ,// Example image import
+    image: require("./roomimg_2.png"), // Example image import
     amenities: ["Wi-Fi", "Air Conditioning", "Gym", "Pool", "Security"],
     availability: "Not Available", // Example of room not being available
   },
@@ -138,7 +138,7 @@ const roomsData = [
       "A charming one-bedroom apartment with hardwood floors and a fireplace.",
     price: "$1500/month",
     location: "Brooklyn",
-    image: require('./roomimg_3.png'),
+    image: require("./roomimg_3.png"),
     amenities: ["Wi-Fi", "Heating", "Laundry"],
     availability: "Available",
   },
@@ -149,7 +149,7 @@ const roomsData = [
       "A trendy loft with floor-to-ceiling windows and stunning views of the city skyline.",
     price: "$2000/month",
     location: "Midtown",
-    image: require('./roomimg_4.png'),
+    image: require("./roomimg_4.png"),
     amenities: ["Wi-Fi", "Air Conditioning", "Parking", "Gym"],
     availability: "Available",
   },
@@ -204,7 +204,7 @@ const roomsData = [
       "An elegant townhouse with a private garden oasis, ideal for outdoor living.",
     price: "$2800/month",
     location: "Harlem",
-    image: require('./roomimg_4.png') ,
+    image: require('./roomimg_4.png'),
     amenities: ["Wi-Fi", "Heating", "Parking"],
     availability: "Available",
   },
