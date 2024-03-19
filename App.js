@@ -1,13 +1,13 @@
-
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Home from './Screens/Home';
-import AllProperties from './Screens/AllProperties';
 import ButtomBar from "./Components/ButtomBar"
 import CustomHeader from './Components/HomeHeader';
 import Color from './constants/Color';
 import { Provider } from 'react-redux';
 import Store from './Store/Store'
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { NavigationContainer } from '@react-navigation/native';
+
+import AllProperties from "./Screens/AllProperties";
+
 
 const Stack = createNativeStackNavigator();
 export default function App() {
@@ -31,5 +31,3 @@ export default function App() {
     </Provider>
   );
 }
-
-
