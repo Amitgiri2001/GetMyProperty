@@ -3,7 +3,7 @@ import { SafeAreaView, ScrollView, StyleSheet } from 'react-native';
 import RoomCard from '../Components/RoomCard';
 import roomsData from '../Dummy Data/roomsData';
 
-const App = () => {
+const AllProperties = () => {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView>
@@ -22,4 +22,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default AllProperties;
