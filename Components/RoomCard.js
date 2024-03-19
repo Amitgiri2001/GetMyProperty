@@ -1,19 +1,31 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 const RoomCard = ({ room }) => {
+  const navigation = useNavigation();
+
+  const handlePress = () => {
+    navigation.navigate('RoomDetails', { room });
+  };
+
+  // Ensure the first image of the array is displayed
+  const primaryImage = room.image[0];
+
   return (
-    <View style={styles.card}>
-      <Image source={room.image} style={styles.image} />
-      <View style={styles.details}>
-        <Text style={styles.title}>{room.title}</Text>
-        <Text style={styles.description}>{room.description.substring(0, 100)}...</Text>
+    <TouchableOpacity onPress={handlePress}>
+      <View style={styles.card}>
+        <Image source={primaryImage} style={styles.image} />
+        <View style={styles.details}>
+          <Text style={styles.title}>{room.title}</Text>
+          <Text style={styles.description}>{room.description.substring(0, 100)}...</Text>
+        </View>
+        <View style={styles.footer}>
+          <Text style={styles.price}>{room.price}</Text>
+          <Text style={styles.location}>{room.location}</Text>
+        </View>
       </View>
-      <View style={styles.footer}>
-        <Text style={styles.price}>{room.price}</Text>
-        <Text style={styles.location}>{room.location}</Text>
-      </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 
@@ -65,4 +77,5 @@ const styles = StyleSheet.create({
     color: '#666',
   },
 });
+
 export default RoomCard;

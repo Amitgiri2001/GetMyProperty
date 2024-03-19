@@ -2,223 +2,164 @@ const roomsData = [
   {
     id: 1,
     title: "Spacious Studio Apartment",
-    description:
-      "A cozy studio apartment with a modern kitchen and a balcony overlooking the city.",
+    description: "A cozy studio apartment with a modern kitchen and a balcony overlooking the city.",
     price: "$1000/month",
     location: "Downtown",
-    image: require("./roomimg_1.png"),
+    image: [
+      require('./roomimg_1.png'),
+      require('./roomimg_2.png'),
+      require('./roomimg_3.png'),
+      require('./roomimg_4.png'),
+      require('./roomimg_5.png')
+    ],
     amenities: ["Wi-Fi", "Air Conditioning", "Laundry", "Parking"],
     availability: "Available",
   },
   {
     id: 2,
     title: "Luxury Penthouse Suite",
-    description:
-      "A luxurious penthouse suite with panoramic views, private jacuzzi, and 24/7 concierge service.",
+    description: "A luxurious penthouse suite with panoramic views, private jacuzzi, and 24/7 concierge service.",
     price: "$3000/month",
     location: "Upper East Side",
-    image: require("./roomimg_2.png"), // Example image import
+    image: [
+      require('./roomimg_2.png'),
+      require('./roomimg_3.png'),
+      require('./roomimg_4.png'),
+      require('./roomimg_5.png'),
+      require('./roomimg_1.png')
+    ],
     amenities: ["Wi-Fi", "Air Conditioning", "Gym", "Pool", "Security"],
-    availability: "Not Available", // Example of room not being available
+    availability: "Not Available",
   },
   {
     id: 3,
-    title: "Cozy One-Bedroom Apartment",
-    description:
-      "A charming one-bedroom apartment with hardwood floors and a fireplace.",
+    title: "Charming Loft in Historic District",
+    description: "A charming loft with exposed brick walls, high ceilings, and close proximity to cafes and galleries.",
     price: "$1500/month",
-    location: "Brooklyn",
-    image: require("./roomimg_3.png"),
-    amenities: ["Wi-Fi", "Heating", "Laundry"],
+    location: "West Village",
+    image: [
+      require('./roomimg_3.png'),
+      require('./roomimg_4.png'),
+      require('./roomimg_5.png'),
+      require('./roomimg_1.png'),
+      require('./roomimg_2.png')
+    ],
+    amenities: ["Wi-Fi", "Heating", "Workspace", "Pet-friendly"],
     availability: "Available",
   },
   {
     id: 4,
-    title: "Modern Loft with City Views",
-    description:
-      "A trendy loft with floor-to-ceiling windows and stunning views of the city skyline.",
+    title: "Modern Apartment with River View",
+    description: "A modern apartment with floor-to-ceiling windows offering stunning views of the river.",
     price: "$2000/month",
-    location: "Midtown",
-    image: require("./roomimg_4.png"),
-    amenities: ["Wi-Fi", "Air Conditioning", "Parking", "Gym"],
+    location: "Brooklyn",
+    image: [
+      require('./roomimg_4.png'),
+      require('./roomimg_5.png'),
+      require('./roomimg_1.png'),
+      require('./roomimg_2.png'),
+      require('./roomimg_3.png')
+    ],
+    amenities: ["Wi-Fi", "Air Conditioning", "Gym", "Parking"],
     availability: "Available",
   },
   {
     id: 5,
-    title: "Charming Studio in Historic Building",
-    description:
-      "A charming studio apartment in a historic building with exposed brick walls.",
+    title: "Cozy Cottage by the Lake",
+    description: "A cozy cottage nestled by the lake, perfect for a weekend getaway.",
     price: "$1200/month",
-    location: "West Village",
-    image: require('./roomimg_5.png'),
-    amenities: ["Wi-Fi", "Heating", "Laundry"],
+    location: "Upstate New York",
+    image: [
+      require('./roomimg_5.png'),
+      require('./roomimg_1.png'),
+      require('./roomimg_2.png'),
+      require('./roomimg_3.png'),
+      require('./roomimg_4.png')
+    ],
+    amenities: ["Lake View", "Fireplace", "Garden", "Pet-friendly"],
     availability: "Available",
   },
   {
     id: 6,
-    title: "Luxury Condo with River Views",
-    description:
-      "A luxurious condo with panoramic views of the river and top-notch amenities.",
-    price: "$3500/month",
-    location: "Battery Park City",
-    image: require('./roomimg_1.png'),
-    amenities: ["Wi-Fi", "Air Conditioning", "Pool", "Gym", "Security"],
-    availability: "Not Available",
+    title: "Sunny Beachfront Condo",
+    description: "A sunny beachfront condo with direct access to the beach and stunning ocean views.",
+    price: "$2500/month",
+    location: "Miami",
+    image: [
+      require('./roomimg_1.png'),
+      require('./roomimg_2.png'),
+      require('./roomimg_3.png'),
+      require('./roomimg_4.png'),
+      require('./roomimg_5.png')
+    ],
+    amenities: ["Beachfront", "Pool", "Gym", "Parking"],
+    availability: "Available",
   },
   {
     id: 7,
-    title: "Sunny Two-Bedroom Apartment",
-    description:
-      "A bright and spacious two-bedroom apartment with plenty of natural light.",
-    price: "$1800/month",
-    location: "Queens",
-    image: require('./roomimg_2.png'),
-    amenities: ["Wi-Fi", "Heating", "Parking", "Laundry"],
+    title: "Rustic Cabin in the Woods",
+    description: "A rustic cabin surrounded by nature, perfect for outdoor enthusiasts.",
+    price: "$800/month",
+    location: "Colorado Rockies",
+    image: [
+      require('./roomimg_2.png'),
+      require('./roomimg_3.png'),
+      require('./roomimg_4.png'),
+      require('./roomimg_5.png'),
+      require('./roomimg_1.png')
+    ],
+    amenities: ["Mountain View", "Fireplace", "Hiking Trails"],
     availability: "Available",
   },
   {
     id: 8,
-    title: "Modern Downtown Loft",
-    description:
-      "A modern loft apartment in the heart of downtown, perfect for urban living.",
-    price: "$2500/month",
-    location: "Financial District",
-    image: require('./roomimg_3.png'),
-    amenities: ["Wi-Fi", "Air Conditioning", "Gym"],
+    title: "City Center Loft with Skyline Views",
+    description: "A stylish loft in the heart of the city with panoramic skyline views.",
+    price: "$1800/month",
+    location: "Downtown",
+    image: [
+      require('./roomimg_3.png'),
+      require('./roomimg_4.png'),
+      require('./roomimg_5.png'),
+      require('./roomimg_1.png'),
+      require('./roomimg_2.png')
+    ],
+    amenities: ["Wi-Fi", "Air Conditioning", "Workspace", "Parking"],
     availability: "Available",
   },
   {
     id: 9,
     title: "Elegant Townhouse with Garden",
-    description:
-      "An elegant townhouse with a private garden oasis, ideal for outdoor living.",
+    description: "An elegant townhouse with a private garden oasis, perfect for entertaining guests.",
     price: "$2800/month",
-    location: "Harlem",
-    image: require('./roomimg_4.png'),
-    amenities: ["Wi-Fi", "Heating", "Parking"],
+    location: "Upper West Side",
+    image: [
+      require('./roomimg_4.png'),
+      require('./roomimg_5.png'),
+      require('./roomimg_1.png'),
+      require('./roomimg_2.png'),
+      require('./roomimg_3.png')
+    ],
+    amenities: ["Garden", "Fireplace", "Parking"],
     availability: "Available",
   },
   {
     id: 10,
-    title: "Beachfront Villa with Private Beach Access",
-    description:
-      "A luxurious beachfront villa with direct access to a private beach, perfect for a seaside getaway.",
-    price: "$5000/month",
-    location: "The Hamptons",
-    image: require('./roomimg_5.png'),
-    amenities: ["Wi-Fi", "Air Conditioning", "Pool", "Parking", "Security"],
-    availability: "Not Available",
-  },
-  {
-    id: 11,
-    title: "Spacious Studio Apartment",
-    description:
-      "A cozy studio apartment with a modern kitchen and a balcony overlooking the city.",
-    price: "$1000/month",
-    location: "Downtown",
-    image: require("./roomimg_1.png"),
-    amenities: ["Wi-Fi", "Air Conditioning", "Laundry", "Parking"],
-    availability: "Available",
-  },
-  {
-    id: 12,
-    title: "Luxury Penthouse Suite",
-    description:
-      "A luxurious penthouse suite with panoramic views, private jacuzzi, and 24/7 concierge service.",
-    price: "$3000/month",
-    location: "Upper East Side",
-    image: require("./roomimg_2.png"), // Example image import
-    amenities: ["Wi-Fi", "Air Conditioning", "Gym", "Pool", "Security"],
-    availability: "Not Available", // Example of room not being available
-  },
-  {
-    id: 13,
-    title: "Cozy One-Bedroom Apartment",
-    description:
-      "A charming one-bedroom apartment with hardwood floors and a fireplace.",
+    title: "Secluded Mountain Retreat",
+    description: "A secluded mountain retreat surrounded by forests and hiking trails, ideal for a peaceful getaway.",
     price: "$1500/month",
-    location: "Brooklyn",
-    image: require("./roomimg_3.png"),
-    amenities: ["Wi-Fi", "Heating", "Laundry"],
+    location: "Smoky Mountains",
+    image: [
+      require('./roomimg_5.png'),
+      require('./roomimg_1.png'),
+      require('./roomimg_2.png'),
+      require('./roomimg_3.png'),
+      require('./roomimg_4.png')
+    ],
+    amenities: ["Mountain View", "Fireplace", "Hiking Trails"],
     availability: "Available",
   },
-  {
-    id: 14,
-    title: "Modern Loft with City Views",
-    description:
-      "A trendy loft with floor-to-ceiling windows and stunning views of the city skyline.",
-    price: "$2000/month",
-    location: "Midtown",
-    image: require("./roomimg_4.png"),
-    amenities: ["Wi-Fi", "Air Conditioning", "Parking", "Gym"],
-    availability: "Available",
-  },
-  {
-    id: 15,
-    title: "Charming Studio in Historic Building",
-    description:
-      "A charming studio apartment in a historic building with exposed brick walls.",
-    price: "$1200/month",
-    location: "West Village",
-    image: require('./roomimg_5.png'),
-    amenities: ["Wi-Fi", "Heating", "Laundry"],
-    availability: "Available",
-  },
-  {
-    id: 16,
-    title: "Luxury Condo with River Views",
-    description:
-      "A luxurious condo with panoramic views of the river and top-notch amenities.",
-    price: "$3500/month",
-    location: "Battery Park City",
-    image: require('./roomimg_1.png'),
-    amenities: ["Wi-Fi", "Air Conditioning", "Pool", "Gym", "Security"],
-    availability: "Not Available",
-  },
-  {
-    id: 17,
-    title: "Sunny Two-Bedroom Apartment",
-    description:
-      "A bright and spacious two-bedroom apartment with plenty of natural light.",
-    price: "$1800/month",
-    location: "Queens",
-    image: require('./roomimg_2.png'),
-    amenities: ["Wi-Fi", "Heating", "Parking", "Laundry"],
-    availability: "Available",
-  },
-  {
-    id: 18,
-    title: "Modern Downtown Loft",
-    description:
-      "A modern loft apartment in the heart of downtown, perfect for urban living.",
-    price: "$2500/month",
-    location: "Financial District",
-    image: require('./roomimg_3.png'),
-    amenities: ["Wi-Fi", "Air Conditioning", "Gym"],
-    availability: "Available",
-  },
-  {
-    id: 19,
-    title: "Elegant Townhouse with Garden",
-    description:
-      "An elegant townhouse with a private garden oasis, ideal for outdoor living.",
-    price: "$2800/month",
-    location: "Harlem",
-    image: require('./roomimg_4.png'),
-    amenities: ["Wi-Fi", "Heating", "Parking"],
-    availability: "Available",
-  },
-  {
-    id: 20,
-    title: "Beachfront Villa with Private Beach Access",
-    description:
-      "A luxurious beachfront villa with direct access to a private beach, perfect for a seaside getaway.",
-    price: "$5000/month",
-    location: "The Hamptons",
-    image: require('./roomimg_5.png'),
-    amenities: ["Wi-Fi", "Air Conditioning", "Pool", "Parking", "Security"],
-    availability: "Not Available",
-  },
+  // Add more room objects as needed
 ];
 
 export default roomsData;
