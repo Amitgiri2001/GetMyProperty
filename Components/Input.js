@@ -1,23 +1,27 @@
 import React, { useState } from 'react';
 import { View, TextInput, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
-const MobileNumberInput = ({ type, keyboardType, placeholder, errorText }) => {
-    const [mobileNumber, setMobileNumber] = useState('');
+const enteredInput = ({ type, keyboardType, placeholder, errorText, onValueChange }) => {
+    const [enteredInput, setEnteredInput] = useState('');
     const [isValid, setIsValid] = useState(true);
 
     const handleInputChange = (text) => {
         if (type === "Mobile Number") {
             if (/^\d{0,10}$/.test(text)) {
-                setMobileNumber(text);
+                setEnteredInput(text);
                 setIsValid(text.length === 10);
             }
         }
+        else {
+            setEnteredInput(text);
+        }
+        onValueChange(text);
     };
 
     const handleSubmit = () => {
         // Handle submission logic here
         if (isValid) {
-            console.log('Mobile number:', mobileNumber);
+            console.log('Mobile number:', enteredInput);
             // Submit logic
         } else {
             console.log('Invalid mobile number');
@@ -33,7 +37,7 @@ const MobileNumberInput = ({ type, keyboardType, placeholder, errorText }) => {
                     style={styles.input}
                     keyboardType={keyboardType}
                     placeholder={placeholder}
-                    value={mobileNumber}
+                    value={enteredInput}
                     onChangeText={handleInputChange}
                 />
             </View>
@@ -45,12 +49,12 @@ const MobileNumberInput = ({ type, keyboardType, placeholder, errorText }) => {
 
 const styles = StyleSheet.create({
     container: {
-        marginVertical: 30,
+        marginVertical: 10,
         width: "100%"
     },
     label: {
         fontSize: 16,
-        marginBottom: 5,
+        marginBottom: 0,
     },
     inputContainer: {
         borderWidth: 1,
@@ -70,17 +74,11 @@ const styles = StyleSheet.create({
         fontSize: 12,
         marginTop: 5,
     },
-    button: {
-        backgroundColor: '#007AFF',
-        borderRadius: 5,
-        paddingVertical: 10,
-        alignItems: 'center',
-        marginTop: 10,
-    },
+
     buttonText: {
         color: 'white',
         fontSize: 16,
     },
 });
 
-export default MobileNumberInput;
+export default enteredInput;

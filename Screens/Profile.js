@@ -3,7 +3,25 @@ import { View, Text, Image, StyleSheet, TouchableOpacity, Pressable } from 'reac
 
 import Register from '../Modal/Register';
 import CustomButton from '../Components/Button';
+
+// redux
+import { updateProfile } from "../Store/ProfileSlice";
+import { useSelector, useDispatch } from 'react-redux'
+
+
 const ProfilePage = () => {
+    // Profile form Data
+    const [ProfileData, setProfileData] = useState({});
+
+    // redux
+    // Inside your component
+    const name = useSelector(state => state.Profile.name);
+    const email = useSelector(state => state.Profile.email);
+    const mobileNumber = useSelector(state => state.Profile.mobileNumber);
+    const agent = useSelector(state => state.Profile.agent);
+    const gender = useSelector(state => state.Profile.gender);
+    console.log(name); // This should log the name
+    const dispatch = useDispatch()
     const [modalVisible, setModalVisible] = useState(false);
 
     function openRegisterModal() {
@@ -13,12 +31,26 @@ const ProfilePage = () => {
         <View style={styles.container}>
             <View style={styles.imageContainer}>
                 <Image source={require('../assets/ProfilePic/boy1.png')} style={styles.profileImage} />
+
+
+
             </View>
-            <Text style={styles.text}>Login to See 1000 Properties near by you & Book Properties in one click</Text>
-            <View style={styles.buttonContainer}>
+            <Text>{name}</Text>
+            <Text>{email}</Text>
+            <Text>{mobileNumber}</Text>
+            <Text>{agent}</Text>
+            <Text>{gender}</Text>
+            {!name && <Text style={styles.text}>Login to See 1000 Properties near by you & Book Properties in one click</Text>}
+            {!mobileNumber && <View style={styles.buttonContainer}>
                 <CustomButton text="Login" textColor="white" backgroundColor='#F194FF' triggeredFunction={openRegisterModal} />
                 <CustomButton text="Register" textColor="white" backgroundColor="#4CD964" triggeredFunction={openRegisterModal} />
-            </View>
+            </View>}
+
+            {mobileNumber && <View style={styles.buttonContainer}>
+                <CustomButton text="Log Out" textColor="white" backgroundColor='#F194FF' triggeredFunction={openRegisterModal} />
+                <CustomButton text="Update" textColor="white" backgroundColor="#4CD964" triggeredFunction={openRegisterModal} />
+            </View>}
+
             <Register modalVisible={modalVisible} setModalVisible={setModalVisible} />
         </View>
     );
@@ -27,16 +59,21 @@ const ProfilePage = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        // marginTop: "50%",
+        // height: '100%',
+        // // height: 1500,
         justifyContent: 'center',
-        alignItems: 'center',
-        padding: 20,
-        marginTop: '35%'
+        marginBottom: 200,
+        // alignItems: 'center',
+        padding: 30,
+        // marginTop: '5%'
     },
     imageContainer: {
         marginTop: 30,
         marginBottom: 20,
         borderRadius: 90, // Half of the width/height of the image
         overflow: 'hidden', // Ensure the image is clipped to the border radius
+        marginHorizontal: '20%'
     },
     profileImage: {
         width: 180,
@@ -51,23 +88,8 @@ const styles = StyleSheet.create({
         justifyContent: "space-between"
     },
 
-    registerButton: {
-        backgroundColor: '#4CD964',
-    },
-    textStyle: {
-        color: 'white',
-        fontWeight: 'bold',
-    },
-    button: {
-        borderRadius: 20,
-        padding: 10,
-        elevation: 2,
-        paddingHorizontal: 40,
-        marginHorizontal: 10
-    },
-    buttonOpen: {
-        backgroundColor: '#F194FF',
-    },
+
+
 });
 
 export default ProfilePage;
