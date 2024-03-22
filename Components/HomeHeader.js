@@ -1,4 +1,6 @@
 
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import Color from "../constants/Color";
 import { View, Image, TouchableOpacity, Text, StyleSheet } from "react-native"
 
 const CustomHeader = ({ navigation }) => {
@@ -10,8 +12,8 @@ const CustomHeader = ({ navigation }) => {
                 style={styles.logo}
             />
             {/* Button on the right */}
-            <TouchableOpacity onPress={() => navigation.navigate('All Properties')}>
-                <Text>Post Property</Text>
+            <TouchableOpacity style={{ marginRight: 10 }} onPress={() => navigation.navigate('All Properties')}>
+                <MaterialCommunityIcons name="bell" size={30} color={Color.notification} />
             </TouchableOpacity>
         </View>
     );
@@ -25,7 +27,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        paddingHorizontal: 20,
+        marginHorizontal: 20,
         height: 60,
         // backgroundColor: ,
         marginLeft: 0
@@ -33,5 +35,6 @@ const styles = StyleSheet.create({
     logo: {
         width: 40,
         height: 40,
+        marginLeft: 10,
     },
 });

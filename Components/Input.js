@@ -15,7 +15,7 @@ const enteredInput = ({ type, keyboardType, placeholder, errorText, onValueChang
         else {
             setEnteredInput(text);
         }
-        onValueChange(text);
+        onValueChange && onValueChange(text);
     };
 
     const handleSubmit = () => {

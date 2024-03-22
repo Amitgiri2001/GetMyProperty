@@ -7,6 +7,7 @@ import CustomButton from '../Components/Button';
 // redux
 import { updateProfile } from "../Store/ProfileSlice";
 import { useSelector, useDispatch } from 'react-redux'
+import ProfileDetailItem from '../Components/ProfileDetailItem';
 
 
 const ProfilePage = () => {
@@ -31,15 +32,17 @@ const ProfilePage = () => {
         <View style={styles.container}>
             <View style={styles.imageContainer}>
                 <Image source={require('../assets/ProfilePic/boy1.png')} style={styles.profileImage} />
-
-
-
             </View>
-            <Text>{name}</Text>
-            <Text>{email}</Text>
-            <Text>{mobileNumber}</Text>
-            <Text>{agent}</Text>
-            <Text>{gender}</Text>
+
+            {name &&
+                <View style={styles.profileContainer}>
+                    <ProfileDetailItem text={name} icon="person" />
+                    <ProfileDetailItem text={email} icon="mail" />
+                    <ProfileDetailItem text={mobileNumber} icon="call" />
+                    <ProfileDetailItem text={agent} icon="person" />
+                    <ProfileDetailItem text={gender} icon="transgender" />
+                </View>
+            }
             {!name && <Text style={styles.text}>Login to See 1000 Properties near by you & Book Properties in one click</Text>}
             {!mobileNumber && <View style={styles.buttonContainer}>
                 <CustomButton text="Login" textColor="white" backgroundColor='#F194FF' triggeredFunction={openRegisterModal} />
@@ -63,13 +66,13 @@ const styles = StyleSheet.create({
         // height: '100%',
         // // height: 1500,
         justifyContent: 'center',
-        marginBottom: 200,
+        // marginBottom: 200,
         // alignItems: 'center',
         padding: 30,
         // marginTop: '5%'
     },
     imageContainer: {
-        marginTop: 30,
+        // marginTop: 30,
         marginBottom: 20,
         borderRadius: 90, // Half of the width/height of the image
         overflow: 'hidden', // Ensure the image is clipped to the border radius
@@ -86,6 +89,9 @@ const styles = StyleSheet.create({
     buttonContainer: {
         flexDirection: 'row',
         justifyContent: "space-between"
+    },
+    profileContainer: {
+        paddingBottom: "3%",
     },
 
 

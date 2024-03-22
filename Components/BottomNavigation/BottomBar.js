@@ -1,23 +1,31 @@
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+import { View } from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import Home from '../Screens/Home';
-import AllProperties from '../Screens/AllProperties';
-import Color from '../constants/Color';
+import Home from '../../Screens/Home';
+import AllProperties from '../../Screens/AllProperties';
+import Color from '../../constants/Color';
+
+
 
 const Tab = createMaterialBottomTabNavigator();
 
 
 
-import Profile from '../Screens/Profile';
+import Profile from '../../Screens/Profile';
+import { Ionicons } from '@expo/vector-icons';
+import PostItem from '../../Screens/PostItem';
+import Save from '../../Screens/Save';
 
-function ButtomBar() {
+function BottomBar() {
     return (
+
         <Tab.Navigator
             initialRouteName="Feed"
             activeColor='#007AFF'
-            inactiveColor='white'
-            barStyle={{ backgroundColor: Color.header }}
-
+            inactiveColor='grey'
+            barStyle={{ backgroundColor: Color.secondaryHeader, borderTopWidth: .17, borderTopColor: 'black' }}
+            shifting={false}
+            shiftingStyle={{ backgroundColor: 'red' }}
 
         >
             <Tab.Screen
@@ -26,7 +34,7 @@ function ButtomBar() {
                 options={{
                     tabBarLabel: 'Home',
                     tabBarIcon: ({ color }) => (
-                        <MaterialCommunityIcons name="home" color={color} size={26} />
+                        <Ionicons name="home" color={color} size={26} />
                     ),
                 }}
             />
@@ -44,18 +52,18 @@ function ButtomBar() {
 
 
             <Tab.Screen
-                name="Notifications"
-                component={AllProperties}
+                name="PostProperty"
+                component={PostItem}
                 options={{
-                    tabBarLabel: 'Updates',
+                    tabBarLabel: 'Post',
                     tabBarIcon: ({ color }) => (
-                        <MaterialCommunityIcons name="bell" color={color} size={26} />
+                        <Ionicons name="add" color={color} size={26} />
                     ),
                 }}
             />
             <Tab.Screen
                 name="Save"
-                component={AllProperties}
+                component={Save}
                 options={{
                     tabBarLabel: 'Save',
 
@@ -79,8 +87,9 @@ function ButtomBar() {
                     ),
                 }}
             />
-        </Tab.Navigator>
+        </ Tab.Navigator >
+
     );
 }
 
-export default ButtomBar
+export default BottomBar
