@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { View, StyleSheet } from 'react-native'
 import CustomModel from './CustomModel'
 import Input from "../Components/Input"
-import CustomButton from '../Components/Button'
+import CustomButton from '../Components/Buttons/ColoredButton'
 import Color from '../constants/Color'
 import ProfileForm from './ProfileForm'
 

@@ -4,7 +4,7 @@ import { Picker } from '@react-native-community/picker';
 import { CheckBox } from 'react-native-elements';
 import CustomModel from "./CustomModel";
 import Input from "../Components/Input"
-import CustomButton from '../Components/Button';
+import CustomButton from '../Components/Buttons/ColoredButton';
 import Color from '../constants/Color';
 
 import { updateProfile } from "../Store/ProfileSlice";

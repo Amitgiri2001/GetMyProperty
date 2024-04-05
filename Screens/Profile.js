@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, Image, StyleSheet, TouchableOpacity, Pressable } from 'react-native';
 
 import Register from '../Modal/Register';
-import CustomButton from '../Components/Button';
+import CustomButton from '../Components/Buttons/ColoredButton';
 
 // redux
 import { updateProfile } from "../Store/ProfileSlice";

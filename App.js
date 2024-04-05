@@ -9,6 +9,7 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import RoomDetailsScreen from './Screens/RoomDetailsScreen';
 import AllProperties from "./Screens/AllProperties";
+import SearchFilter from "./Screens/SearchFilter";
 
 const Stack = createNativeStackNavigator();
 export default function App() {
@@ -26,8 +27,15 @@ export default function App() {
               marginLeft: 0, // Set marginLeft to 0 to remove the left margin
             },
           }} />
+          {/* All Properties screen */}
           <Stack.Screen name='All Properties' component={AllProperties} />
+
+          {/* Properties Details Screen */}
           <Stack.Screen name="RoomDetails" component={RoomDetailsScreen} options={{ title: 'Room Details' }} />
+
+
+          {/* Properties Search Screen */}
+          <Stack.Screen name="SearchFilter" component={SearchFilter} options={{ title: 'Filters' }} />
 
         </Stack.Navigator>
       </NavigationContainer>

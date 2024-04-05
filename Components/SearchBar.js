@@ -3,9 +3,10 @@ import { View, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons'; // Assuming you're using Expo for vector icons
 
 import { placeholders } from '../Data/SearchPlaceHolder';
-import SearchDialog from './Search/SearchDialog';
+import { useNavigation } from '@react-navigation/native';
 
 const SearchBar = () => {
+    const navigation = useNavigation();
 
     const [placeholderIdx, setPlaceholderIdx] = useState(0);
 
@@ -19,24 +20,16 @@ const SearchBar = () => {
 
     // open Search Dialog
 
-    const [isSearchDialogOpen, setIsSearchDialogOpen] = useState(false);
 
-    const openSearchDialog = () => {
-        setIsSearchDialogOpen(true);
-    };
-
-    const closeSearchDialog = () => {
-        setIsSearchDialogOpen(false);
-    };
 
 
 
     return (
         <View style={styles.container}>
-            <TouchableOpacity style={styles.filterButton} onPress={openSearchDialog}>
+            <TouchableOpacity style={styles.filterButton}>
                 {/* Your filter button icon */}
-                <Ionicons name="filter" size={24} color="black" />
-                {isSearchDialogOpen && <SearchDialog isOpen={isSearchDialogOpen} onClose={closeSearchDialog} />}
+                <Ionicons name="filter" size={24} color="black" onPress={() => { navigation.navigate('SearchFilter') }} />
+
             </TouchableOpacity>
             <View style={styles.searchBox}>
                 {/* Your search input box */}

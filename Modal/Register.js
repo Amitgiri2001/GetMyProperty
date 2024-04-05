@@ -3,7 +3,7 @@ import { Alert, Modal, StyleSheet, Text, Pressable, View } from 'react-native';
 
 
 import Input from '../Components/Input';
-import CustomButton from '../Components/Button';
+import CustomButton from '../Components/Buttons/ColoredButton';
 import CustomModel from './CustomModel';
 import Otp from './Otp';
 import Color from '../constants/Color';
