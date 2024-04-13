@@ -7,19 +7,20 @@ import Input from "../Components/Input"
 import CustomButton from '../Components/Buttons/ColoredButton';
 import Color from '../constants/Color';
 
-import { updateProfile } from "../Store/ProfileSlice";
 import { useSelector, useDispatch } from 'react-redux'
-
+import { updateName, updateEmail, updateAgent, updateGender } from '../Store/ProfileSlice';
 const ProfileForm = ({ isProfileFormVisible, setProfileFormVisible }) => {
+
 
     const [isChecked, setIsChecked] = useState(true);
     const dispatch = useDispatch()
+    const mobile = useSelector((state) => { return state.Profile.mobileNumber })
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [gender, setGender] = useState("");
     const [agent, setAgent] = useState("No");
-    const [mobileNumber, setMobileNumber] = useState("");
+    const [mobileNumber, setMobileNumber] = useState(mobile);
     function handleDataChange(text, identifier) {
         if (identifier === "name") {
             setName(text);
@@ -39,16 +40,18 @@ const ProfileForm = ({ isProfileFormVisible, setProfileFormVisible }) => {
 
     function setProfile(data) {
 
-        const dummyData = {
-            name: name,
-            email: email,
-            mobileNumber: mobileNumber,
-            gender: gender,
-            agent: agent
-        };
+        if (!name || !email || !gender) {
+            console.log("Some Empty field")
+            return;
+        } else {
 
-        dispatch(updateProfile(dummyData));
-        setProfileFormVisible(false)
+            dispatch(updateName(name));
+            dispatch(updateEmail(email));
+            dispatch(updateGender(gender));
+            dispatch(updateAgent(agent));
+            setProfileFormVisible(false)
+        }
+
     }
 
     return (
@@ -57,7 +60,7 @@ const ProfileForm = ({ isProfileFormVisible, setProfileFormVisible }) => {
                 <Input type="Full Name" keyboardType="default" placeholder="Enter Your Full Name" errorText="Name should be minimum 4 Character long" onValueChange={(text) => handleDataChange(text, "name")} />
                 <Input type="Email" keyboardType="default" placeholder="Enter Your Email" errorText="email should be minimum 6 Character long" onValueChange={(text) => handleDataChange(text, "email")} />
 
-                <Input type="Mobile Number" keyboardType="phone-pad" placeholder="Enter Your Mobile Number" errorText="Please enter a valid 10-digit mobile number" existingVale="9876543212" disability={true} onValueChange={(text) => handleDataChange(text, "mobile Number")} />
+                <Input type="Mobile Number" keyboardType="phone-pad" placeholder="Enter Your Mobile Number" errorText="Please enter a valid 10-digit mobile number" existingValue="9876543212" disability={true} />
 
                 {/* Input for gender */}
                 <View style={styles.container}>

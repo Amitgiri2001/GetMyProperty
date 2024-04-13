@@ -1,3 +1,3 @@
-const placeholders = ["Search 1", "Search 2", "Search 3", "Search 4", "Search 5"];
+const placeholders = ["Goria", "New Town", "Bhavanipur", "Howrah", "Sector V"];
 
 export { placeholders };

@@ -213,3 +213,10 @@ const Dymmy = [
         }
     }
 ]
+
+
+const BASE_URL = "http://192.168.160.104:8080/api/"
+module.exports = {
+    BASE_URL: BASE_URL,
+    Dymmy: Dymmy
+}

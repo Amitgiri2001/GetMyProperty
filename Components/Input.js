@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, TextInput, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
-const enteredInput = ({ type, keyboardType, placeholder, errorText, onValueChange }) => {
+const enteredInput = ({ type, keyboardType, placeholder, errorText, onValueChange, existingValue }) => {
     const [enteredInput, setEnteredInput] = useState('');
     const [isValid, setIsValid] = useState(true);
 
@@ -37,7 +37,7 @@ const enteredInput = ({ type, keyboardType, placeholder, errorText, onValueChang
                     style={styles.input}
                     keyboardType={keyboardType}
                     placeholder={placeholder}
-                    value={enteredInput}
+                    value={existingValue || enteredInput}
                     onChangeText={handleInputChange}
                 />
             </View>

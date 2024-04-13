@@ -3,7 +3,7 @@ const roomsData = [
     id: 1,
     title: "Spacious Studio Apartment",
     description: "A cozy studio apartment with a modern kitchen and a balcony overlooking the city.",
-    price: "$1000/month",
+    price: "₹5000/month",
     location: "Downtown",
     image: [
       require('./roomimg_1.png'),
@@ -19,7 +19,7 @@ const roomsData = [
     id: 2,
     title: "Luxury Penthouse Suite",
     description: "A luxurious penthouse suite with panoramic views, private jacuzzi, and 24/7 concierge service.",
-    price: "$3000/month",
+    price: "₹3000/month",
     location: "Upper East Side",
     image: [
       require('./roomimg_2.png'),
@@ -35,7 +35,7 @@ const roomsData = [
     id: 3,
     title: "Charming Loft in Historic District",
     description: "A charming loft with exposed brick walls, high ceilings, and close proximity to cafes and galleries.",
-    price: "$1500/month",
+    price: "₹7000/month",
     location: "West Village",
     image: [
       require('./roomimg_3.png'),
@@ -51,7 +51,7 @@ const roomsData = [
     id: 4,
     title: "Modern Apartment with River View",
     description: "A modern apartment with floor-to-ceiling windows offering stunning views of the river.",
-    price: "$2000/month",
+    price: "₹9000/month",
     location: "Brooklyn",
     image: [
       require('./roomimg_4.png'),
@@ -67,7 +67,7 @@ const roomsData = [
     id: 5,
     title: "Cozy Cottage by the Lake",
     description: "A cozy cottage nestled by the lake, perfect for a weekend getaway.",
-    price: "$1200/month",
+    price: "₹55000/month",
     location: "Upstate New York",
     image: [
       require('./roomimg_5.png'),
@@ -83,7 +83,7 @@ const roomsData = [
     id: 6,
     title: "Sunny Beachfront Condo",
     description: "A sunny beachfront condo with direct access to the beach and stunning ocean views.",
-    price: "$2500/month",
+    price: "₹8500/month",
     location: "Miami",
     image: [
       require('./roomimg_1.png'),
@@ -99,7 +99,7 @@ const roomsData = [
     id: 7,
     title: "Rustic Cabin in the Woods",
     description: "A rustic cabin surrounded by nature, perfect for outdoor enthusiasts.",
-    price: "$800/month",
+    price: "₹5500/month",
     location: "Colorado Rockies",
     image: [
       require('./roomimg_2.png'),
@@ -115,7 +115,7 @@ const roomsData = [
     id: 8,
     title: "City Center Loft with Skyline Views",
     description: "A stylish loft in the heart of the city with panoramic skyline views.",
-    price: "$1800/month",
+    price: "₹15500/month",
     location: "Downtown",
     image: [
       require('./roomimg_3.png'),
@@ -131,7 +131,7 @@ const roomsData = [
     id: 9,
     title: "Elegant Townhouse with Garden",
     description: "An elegant townhouse with a private garden oasis, perfect for entertaining guests.",
-    price: "$2800/month",
+    price: "₹25500/month",
     location: "Upper West Side",
     image: [
       require('./roomimg_4.png'),
@@ -147,7 +147,7 @@ const roomsData = [
     id: 10,
     title: "Secluded Mountain Retreat",
     description: "A secluded mountain retreat surrounded by forests and hiking trails, ideal for a peaceful getaway.",
-    price: "$1500/month",
+    price: "₹7000/month",
     location: "Smoky Mountains",
     image: [
       require('./roomimg_5.png'),

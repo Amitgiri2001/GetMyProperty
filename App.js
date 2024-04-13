@@ -11,10 +11,14 @@ import RoomDetailsScreen from './Screens/RoomDetailsScreen';
 import AllProperties from "./Screens/AllProperties";
 import SearchFilter from "./Screens/SearchFilter";
 
+
+
+import Config from 'react-native-config';
+
+console.log(Config)
+
 const Stack = createNativeStackNavigator();
 export default function App() {
-
-
 
   return (
     <Provider store={Store}>
@@ -29,6 +33,7 @@ export default function App() {
           }} />
           {/* All Properties screen */}
           <Stack.Screen name='All Properties' component={AllProperties} />
+
 
           {/* Properties Details Screen */}
           <Stack.Screen name="RoomDetails" component={RoomDetailsScreen} options={{ title: 'Room Details' }} />

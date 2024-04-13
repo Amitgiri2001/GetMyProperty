@@ -4,6 +4,7 @@ import { Button, StyleSheet, Text, View, ImageBackground } from 'react-native';
 import SearchBar from '../Components/SearchBar';
 import AllProperties from './AllProperties';
 
+
 const Home = ({ navigation }) => {
     return (
         <View style={styles.container}>
@@ -16,7 +17,9 @@ const Home = ({ navigation }) => {
             </View>
 
             <View style={styles.body}>
+
                 <AllProperties />
+
             </View>
 
         </View>
@@ -49,7 +52,6 @@ const styles = StyleSheet.create({
     },
 
     body: {
-        marginTop: '5%',
         flex: 4,
     },
 

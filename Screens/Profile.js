@@ -54,7 +54,7 @@ const ProfilePage = () => {
                 <CustomButton text="Update" textColor="white" backgroundColor="#4CD964" triggeredFunction={openRegisterModal} />
             </View>}
 
-            <Register modalVisible={modalVisible} setModalVisible={setModalVisible} />
+            {modalVisible && <Register modalVisible={modalVisible} setModalVisible={setModalVisible} />}
         </View>
     );
 };
