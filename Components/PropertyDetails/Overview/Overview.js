@@ -2,10 +2,11 @@ import React from 'react'
 import { Button, Icon } from 'react-native-elements';
 import Color from '../../../constants/Color';
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
-import Card from './Card';
+import Card from '../Highlights/Card';
 import ReviewComponent from './Ratings';
+import Padding from '../../../constants/Padding';
 
-const Overview = () => {
+const Overview = ({ title, price }) => {
     return (
         <View>
             <View style={styles.bottomContainer}>
@@ -18,8 +19,8 @@ const Overview = () => {
 
             <View style={styles.priceContainer}>
                 <View style={styles.priceTag}>
-                    <Text style={styles.priceText}>₹ 2000</Text>
-                    <Text style={styles.perMonthText}>/month</Text>
+                    <Text style={styles.priceText}>{price}</Text>
+                    {/* <Text style={styles.perMonthText}>/month</Text> */}
                 </View>
                 <Text style={styles.subheading}>Negotiable, Deposit amount: ₹2000</Text>
                 <Text style={styles.learnText2}>Learn more</Text>
@@ -32,17 +33,14 @@ const Overview = () => {
 
                 {/* Rating and reviews container  */}
 
-                <Text style={styles.heading}>Property Name</Text>
+                <Text style={styles.heading}>{title}</Text>
 
-                <ReviewComponent rating={4.5} numReviews={11} location="Siddha Happyville, Rajarhat" />
+                <ReviewComponent rating={4.5} numReviews={11} />
+
+                <Text style={styles.location}>Siddha Happyville, Rajarhat</Text>
 
 
-                <ScrollView style={styles.cardContainer} horizontal>
-                    <Card icon={{ name: "apartment", color: 'blue' }} text="2BHK" />
-                    <Card icon={{ name: "stairs", color: 'orange' }} text="8 out of 10 floors" />
-                    <Card icon={{ name: "people", color: 'blue', type: 'material' }} text="For Family/Single person" />
-                    <Card icon={{ name: "square", color: 'orange' }} text="Area 1800sf" />
-                </ScrollView>
+
 
 
             </View>
@@ -57,7 +55,7 @@ const styles = StyleSheet.create({
     // Existing styles
     bottomContainer: {
         marginTop: 20,
-        paddingHorizontal: 10,
+        paddingHorizontal: Padding.sidePadding,
         padding: 10,
         backgroundColor: Color.postDetails.background1,
     },
@@ -82,9 +80,9 @@ const styles = StyleSheet.create({
     // New styles
     priceContainer: {
         marginTop: 20,
-        paddingHorizontal: 10,
+        paddingHorizontal: Padding.sidePadding,
         backgroundColor: Color.homeBackground2,
-        paddingVertical: 20,
+        paddingVertical: Padding.verticalPadding,
     },
     priceTag: {
         flexDirection: 'row',
@@ -103,29 +101,28 @@ const styles = StyleSheet.create({
         fontSize: 16,
     },
     button: {
-        marginTop: 20,
+        marginTop: 10,
         backgroundColor: Color.postDetails.lightGrey,
         paddingVertical: 5,
-        paddingHorizontal: 20,
+        paddingHorizontal: 10,
         borderRadius: 5,
-        width: 120,
+        width: 100,
         borderColor: Color.Button.borderColor,
-        borderWidth: 1,
+        borderWidth: .5,
 
     },
     buttonText: {
         color: 'black',
         fontSize: 16,
     },
-    cardContainer: {
-        flexDirection: 'row'
-    },
+
     heading: {
         fontSize: 26,
         fontWeight: 'bold',
-        paddingLeft: 10
+        // paddingLeft: 10
     },
     overviewContainer: {
-        paddingVertical: 20,
+        paddingVertical: Padding.verticalPadding,
+        padding: Padding.sidePadding
     }
 });

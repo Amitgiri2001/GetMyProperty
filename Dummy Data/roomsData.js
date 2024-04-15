@@ -4,7 +4,7 @@ const roomsData = [
     title: "Spacious Studio Apartment",
     description: "A cozy studio apartment with a modern kitchen and a balcony overlooking the city.",
     price: "₹5000/month",
-    location: "Downtown",
+    location: "New Town",
     image: [
       require('./roomimg_1.png'),
       require('./roomimg_2.png'),
@@ -20,7 +20,7 @@ const roomsData = [
     title: "Luxury Penthouse Suite",
     description: "A luxurious penthouse suite with panoramic views, private jacuzzi, and 24/7 concierge service.",
     price: "₹3000/month",
-    location: "Upper East Side",
+    location: "Rajarhat",
     image: [
       require('./roomimg_2.png'),
       require('./roomimg_3.png'),
@@ -36,7 +36,7 @@ const roomsData = [
     title: "Charming Loft in Historic District",
     description: "A charming loft with exposed brick walls, high ceilings, and close proximity to cafes and galleries.",
     price: "₹7000/month",
-    location: "West Village",
+    location: "Salt Lake",
     image: [
       require('./roomimg_3.png'),
       require('./roomimg_4.png'),
@@ -68,7 +68,7 @@ const roomsData = [
     title: "Cozy Cottage by the Lake",
     description: "A cozy cottage nestled by the lake, perfect for a weekend getaway.",
     price: "₹55000/month",
-    location: "Upstate New York",
+    location: "Salt Lake",
     image: [
       require('./roomimg_5.png'),
       require('./roomimg_1.png'),
@@ -84,7 +84,7 @@ const roomsData = [
     title: "Sunny Beachfront Condo",
     description: "A sunny beachfront condo with direct access to the beach and stunning ocean views.",
     price: "₹8500/month",
-    location: "Miami",
+    location: "Salt Lake",
     image: [
       require('./roomimg_1.png'),
       require('./roomimg_2.png'),
@@ -100,7 +100,7 @@ const roomsData = [
     title: "Rustic Cabin in the Woods",
     description: "A rustic cabin surrounded by nature, perfect for outdoor enthusiasts.",
     price: "₹5500/month",
-    location: "Colorado Rockies",
+    location: "New Town",
     image: [
       require('./roomimg_2.png'),
       require('./roomimg_3.png'),
@@ -116,7 +116,7 @@ const roomsData = [
     title: "City Center Loft with Skyline Views",
     description: "A stylish loft in the heart of the city with panoramic skyline views.",
     price: "₹15500/month",
-    location: "Downtown",
+    location: "New Town",
     image: [
       require('./roomimg_3.png'),
       require('./roomimg_4.png'),
@@ -132,7 +132,7 @@ const roomsData = [
     title: "Elegant Townhouse with Garden",
     description: "An elegant townhouse with a private garden oasis, perfect for entertaining guests.",
     price: "₹25500/month",
-    location: "Upper West Side",
+    location: "Salt Lake",
     image: [
       require('./roomimg_4.png'),
       require('./roomimg_5.png'),
@@ -148,7 +148,7 @@ const roomsData = [
     title: "Secluded Mountain Retreat",
     description: "A secluded mountain retreat surrounded by forests and hiking trails, ideal for a peaceful getaway.",
     price: "₹7000/month",
-    location: "Smoky Mountains",
+    location: "New Town",
     image: [
       require('./roomimg_5.png'),
       require('./roomimg_1.png'),

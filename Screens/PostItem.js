@@ -1,9 +1,10 @@
 import React from 'react'
 import { View, Text } from 'react-native'
+import PostProperty from '../Components/PostProperty/PostProperty'
 const PostItem = () => {
     return (
         <View>
-            <Text>Post ItemScreen</Text>
+            <PostProperty />
         </View>
     )
 }

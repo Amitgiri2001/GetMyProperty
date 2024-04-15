@@ -6,26 +6,27 @@ const ReviewComponent = ({ rating, numReviews, location }) => {
     return (
         <View style={styles.mainContainer}>
             <View style={styles.container}>
+                <Text style={styles.text}>{rating}</Text>
 
                 <Rating
                     activeColor="#F4C10F"
                     fullStarColor="#F4C10F" // Add this line to specify the color of filled stars
                     rating={rating}
                     readonly
-                    starSize={16}
+                    starSize={20}
                 />
                 <Text style={styles.numReviews}>({numReviews}
                     Reviews)</Text>
 
             </View>
-            <Text style={styles.location}>{location}</Text>
+
         </View>
     );
 };
 
 const styles = StyleSheet.create({
     mainContainer: {
-        paddingHorizontal: 10,
+        // paddingHorizontal: 10,
     },
     container: {
         flexDirection: 'row',
@@ -39,6 +40,10 @@ const styles = StyleSheet.create({
         fontSize: 12,
         marginLeft: 8,
     },
+    text: {
+        fontSize: 20,
+        marginRight: 5,
+    }
 });
 
 export default ReviewComponent;

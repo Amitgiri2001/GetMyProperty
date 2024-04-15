@@ -14,6 +14,7 @@ const RoomCard = ({ room }) => {
     navigation.navigate('RoomDetails', { room });
   };
 
+
   const toggleLove = () => {
     setIsLoved(!isLoved);
   };

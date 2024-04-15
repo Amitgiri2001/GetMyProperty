@@ -1,3 +1,3 @@
-const placeholders = ["Goria", "New Town", "Bhavanipur", "Howrah", "Sector V"];
+const placeholders = ["New Town", "Salt lake", "Rajarhat", "Kestopur"];
 
 export { placeholders };

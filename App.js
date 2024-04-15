@@ -14,6 +14,8 @@ import SearchFilter from "./Screens/SearchFilter";
 
 
 import Config from 'react-native-config';
+import Header from "./Components/PropertyDetails/Header";
+import PostProperty from "./Components/PostProperty/PostProperty";
 
 console.log(Config)
 
@@ -36,7 +38,22 @@ export default function App() {
 
 
           {/* Properties Details Screen */}
-          <Stack.Screen name="RoomDetails" component={RoomDetailsScreen} options={{ title: 'Room Details' }} />
+          <Stack.Screen name="RoomDetails" component={RoomDetailsScreen} options={{
+            headerTitle: () => <Header />,
+            headerStyle: {
+              backgroundColor: Color.secondaryHeader,
+              marginLeft: -10,
+            },
+          }} />
+
+          {/* Post Property Screen */}
+          <Stack.Screen name="PostProperty" component={PostProperty} options={{
+            headerTitle: () => <Header />,
+            headerStyle: {
+              backgroundColor: Color.secondaryHeader,
+              marginLeft: -10,
+            },
+          }} />
 
 
           {/* Properties Search Screen */}

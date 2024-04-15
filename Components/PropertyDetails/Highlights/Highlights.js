@@ -3,6 +3,8 @@ import { View, Text, Image, StyleSheet, FlatList } from 'react-native';
 import Color from '../../../constants/Color';
 // import Icon from 'react-native-vector-icons/FontAwesome';
 import { Icon } from 'react-native-elements';
+import Header from './Header';
+import Padding from '../../../constants/Padding';
 
 
 const Highlights = () => {
@@ -30,16 +32,7 @@ const Highlights = () => {
 
     return (
         <View style={styles.container}>
-            {/* Header */}
-            <View style={styles.header}>
-                <Icon name='shield-checkmark-outline' type='ionicon'
-                    style={styles.image} size={50} />
-                <View style={styles.headerContent}>
-                    <Text style={styles.heading}>Other Key Highlights</Text>
-                    <Text style={styles.subheading}>Why you should choose the property</Text>
-                </View>
-            </View>
-            {/* FlatList */}
+            <Header icon='shield-checkmark-outline' heading="Other Key Highlights" subheading="Why you should choose the property" />
             <FlatList
                 data={data}
                 renderItem={renderItem}
@@ -52,32 +45,9 @@ const Highlights = () => {
 
 const styles = StyleSheet.create({
     container: {
-        padding: 10,
-        backgroundColor: Color.homeBackground1
-    },
-    header: {
-        flexDirection: 'row',
-        marginBottom: 10,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    image: {
-        // width: '50%', // 1/4th of the container width
-        // height: 100,
-        marginHorizontal: 10,
-        // borderWidth: 1,
-        // paddingLeft: 0,
-    },
-    headerContent: {
-        flex: 1, // Takes the remaining 3/4th of the container width
-    },
-    heading: {
-        fontSize: 18,
-        fontWeight: 'bold',
-    },
-    subheading: {
-        fontSize: 16,
-        color: '#666',
+        // padding: 10,
+        backgroundColor: Color.homeBackground1,
+        paddingVertical: Padding.verticalPadding
     },
     card: {
         backgroundColor: '#fff',

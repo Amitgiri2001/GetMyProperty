@@ -15,7 +15,7 @@ const Color = {
         hoverBorderColor: '#576CBC',
         modernBorderColor: "#5BBCFF"
     },
-    primaryOrange: "#DC6B19",
+    primaryOrange: "#DC9A00",
     verifiedColor: '#4CAF50',
     postDetails: {
         background1: "#eef9f3",

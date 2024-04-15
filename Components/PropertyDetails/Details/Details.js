@@ -1,11 +1,13 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import Color from '../../../constants/Color';
+import Header from '../Highlights/Header';
+import Padding from '../../../constants/Padding';
 
 const PropertyDetails = ({ title, details }) => {
     return (
         <View style={styles.propertyDetails}>
-            <Text style={styles.detailsTitle}>{title}</Text>
+            <Header icon="home" color={Color.primaryOrange} heading="Details" subheading="Emphasized details of the property" />
             <View>
                 {details.map((item) => (
                     <View key={item.key} style={styles.detailItem}>
@@ -20,22 +22,15 @@ const PropertyDetails = ({ title, details }) => {
 
 const styles = StyleSheet.create({
     propertyDetails: {
+        paddingVertical: Padding.verticalPadding,
 
-        borderRadius: 4,
-        padding: 16,
-        paddingVertical: 24,
-        backgroundColor: Color.homeBackground2
-    },
-    detailsTitle: {
-        fontSize: 18,
-        fontWeight: 'bold',
-        color: '#333',
-        marginBottom: 8,
+        backgroundColor: Color.homeBackground2,
     },
     detailItem: {
+        paddingHorizontal: Padding.sidePadding,
         flexDirection: 'row',
         justifyContent: 'space-between',
-        marginBottom: 4,
+        marginBottom: 6,
     },
     detailLabel: {
         fontWeight: 'bold',

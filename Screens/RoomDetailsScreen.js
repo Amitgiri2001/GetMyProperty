@@ -3,8 +3,13 @@ import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity, ScrollView } fr
 import Slider from '../Components/PropertyDetails/ImageContainer/ImageContainer';
 import { AntDesign, FontAwesome } from '@expo/vector-icons'; // Import icons from expo/vector-icons
 import Overview from '../Components/PropertyDetails/Overview/Overview';
-import Highlights from '../Components/PropertyDetails/Highlights.js/Highlights';
+import Highlights from '../Components/PropertyDetails/Highlights/Highlights';
 import PropertyDetails from '../Components/PropertyDetails/Details/Details';
+import MainHighlights from '../Components/PropertyDetails/Highlights/MainHighlights';
+import NearbyAmenities from '../Components/PropertyDetails/Map/Nearby';
+import Amenities from '../Components/PropertyDetails/Amenities/Amenities';
+import ReviewComponent from '../Components/PropertyDetails/Overview/Ratings';
+import ReviewsSection from '../Components/PropertyDetails/Reviews/Reviews';
 
 const RoomDetailScreen = ({ route, navigation }) => {
   const { room } = route.params;
@@ -24,13 +29,18 @@ const RoomDetailScreen = ({ route, navigation }) => {
     { key: 2, label: 'Carpet Area:', value: '1100 sq.ft. (102.19 sq.m.)' },
     { key: 3, label: 'Furnishing:', value: 'Furnished' },
     { key: 4, label: 'Power backup:', value: 'Full' },
+    { key: 5, label: 'Parking:', value: 'Covered' },
+    { key: 6, label: 'Security:', value: '24/7 Security Guards' },
+    // Add more items as needed
   ];
+
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <ScrollView style={styles.container}>
         <Slider images={room.image} />
-        <Overview />
+        <Overview title={room.title} price={room.price} />
+        <MainHighlights />
         <Highlights />
         <PropertyDetails title="Property Details" details={details} />
         <View style={styles.buttonContainer}>
@@ -41,19 +51,8 @@ const RoomDetailScreen = ({ route, navigation }) => {
             <AntDesign name="heart" size={24} color="red" />
           </TouchableOpacity>
         </View>
-
-        <View style={styles.detailsContainer}>
-          <Text style={styles.title}>{room.title}</Text>
-          <Text style={styles.location}>{room.location}</Text>
-          <Text style={styles.price}>{room.price}</Text>
-          <Text style={styles.description}>{room.description}</Text>
-          <Text style={styles.label}>Amenities:</Text>
-          <View style={styles.amenitiesContainer}>
-            {room.amenities.map((amenity, index) => (
-              <Text key={index} style={styles.amenity}>{amenity}</Text>
-            ))}
-          </View>
-        </View>
+        <Amenities amenities={room.amenities} />
+        <ReviewsSection />
       </ScrollView>
     </SafeAreaView>
   );
@@ -62,6 +61,7 @@ const RoomDetailScreen = ({ route, navigation }) => {
 const styles = StyleSheet.create({
   container: {
     position: 'relative',
+    backgroundColor: 'white',
   },
   buttonContainer: {
     position: 'absolute',
@@ -72,9 +72,7 @@ const styles = StyleSheet.create({
   button: {
     marginHorizontal: 5,
   },
-  detailsContainer: {
-    paddingHorizontal: 20,
-  },
+
   title: {
     fontSize: 24,
     fontWeight: 'bold',
@@ -95,24 +93,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginBottom: 20,
   },
-  label: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    marginBottom: 10,
-  },
-  amenitiesContainer: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-  },
-  amenity: {
-    fontSize: 16,
-    marginRight: 10,
-    marginBottom: 5,
-    backgroundColor: '#f2f2f2',
-    paddingVertical: 5,
-    paddingHorizontal: 10,
-    borderRadius: 5,
-  },
+
 });
 
 export default RoomDetailScreen;
